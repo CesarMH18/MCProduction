@@ -59,8 +59,8 @@ cd ../../
 
 echo "================= PB: CMSRUN starting Gen step ===================="
 # PSet is the name that crab assigns to the config file of the job
-cmsRun -j ${CHANNEL_DECAY}_step0.log  -p PSet.py
-#cmsRun -j ${CHANNEL_DECAY}_step0.log -p step0-GS-${CHANNEL_DECAY}_cfg.py
+#cmsRun -j ${CHANNEL_DECAY}_step0.log  -p PSet.py
+cmsRun -j ${CHANNEL_DECAY}_step0.log -p step0-GS-${CHANNEL_DECAY}_cfg.py
 
 
 echo "================= cmssw environment prepration Reco step ===================="
