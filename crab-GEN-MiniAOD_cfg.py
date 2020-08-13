@@ -28,7 +28,7 @@ config.JobType.inputFiles = ['step1-DR-ups2s2ups1spipi_cfg.py',
 config.JobType.disableAutomaticOutputCollection = True
 config.JobType.eventsPerLumi = 10000
 config.JobType.numCores = 1
-config.JobType.maxMemoryMB = 3300
+# config.JobType.maxMemoryMB = 3300
 config.JobType.scriptExe = 'MCcrabJobScript.sh'
 # config.JobType.scriptArgs = ['CHANNEL_DECAY='+channel,'YEAR=2018']
 config.JobType.outputFiles = ['MC-ups2s2ups1spipi.root']
