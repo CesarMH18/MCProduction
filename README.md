@@ -6,7 +6,7 @@ Steps to generate Private MC samples
 
 You can download fragment examples from https://cms-pdmv.cern.ch/mcm
 
-In this tutorial we are using https://raw.githubusercontent.com/CesarMH18/MCProduction/master/py8_Ups(2S)2Ups(1S)pipi_EvtGen_TuneCP5_13TeV_cfi.py as fragment.
+In this tutorial we are using [a relative link](py8_Ups\(2S\)2Ups\(1S\)pipi_EvtGen_TuneCP5_13TeV_cfi.py) as fragment.
 
 * Edit and run the prepare script. (Remember signing in to the GRID in order to find the pileup files in DAS)
 
