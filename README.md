@@ -10,7 +10,7 @@ In this tutorial we are using [#Ups(2S)\to#Ups(1S)#pi#pi](py8_Ups\(2S\)2Ups\(1S\
 
 * Edit and run the prepare script. (Remember signing in to the GRID in order to find the pileup files in DAS)
 
-* You should have
+* You should have several steps python config files
 
 
 * Finally send the job using crab-GEN-MiniAOD_cfg.py
