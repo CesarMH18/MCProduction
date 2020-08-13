@@ -36,11 +36,11 @@ elif [ "$YEAR" == "2017" ] ; then
   MINI_SCRAM="slc6_amd64_gcc630"
 elif [ "$YEAR" == "2018" ] ; then
   GEN_REL="CMSSW_10_2_18"
-  GEN_SCRAM="slc6_amd64_gcc700"
+  GEN_SCRAM="slc7_amd64_gcc700"
   RECO_REL="CMSSW_10_2_18"
-  RECO_SCRAM="slc6_amd64_gcc700"
+  RECO_SCRAM="slc7_amd64_gcc700"
   MINI_REL="CMSSW_10_2_18"
-  MINI_SCRAM="slc6_amd64_gcc700"
+  MINI_SCRAM="slc7_amd64_gcc700"
 fi
 
 
@@ -59,8 +59,8 @@ cd ../../
 
 echo "================= PB: CMSRUN starting Gen step ===================="
 # PSet is the name that crab assigns to the config file of the job
-#cmsRun -j ${CHANNEL_DECAY}_step0.log  -p PSet.py
-cmsRun -j ${CHANNEL_DECAY}_step0.log -p step0-GS-${CHANNEL_DECAY}_cfg.py
+cmsRun -j ${CHANNEL_DECAY}_step0.log  -p PSet.py
+#cmsRun -j ${CHANNEL_DECAY}_step0.log -p step0-GS-${CHANNEL_DECAY}_cfg.py
 
 
 echo "================= cmssw environment prepration Reco step ===================="
@@ -96,7 +96,7 @@ fi
 
 cd $MINI_REL/src
 eval `scram runtime -sh`
-scram b distclean && scram b vclean && scram b clean
+#scram b distclean && scram b vclean && scram b clean
 scram b
 cd ../../
 
