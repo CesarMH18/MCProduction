@@ -35,11 +35,11 @@ elif [ "$YEAR" == "2017" ] ; then
   MINI_REL="CMSSW_9_4_15"
   MINI_SCRAM="slc6_amd64_gcc630"
 elif [ "$YEAR" == "2018" ] ; then
-  GEN_REL="CMSSW_10_2_18"
+  GEN_REL="CMSSW_10_2_20_UL"
   GEN_SCRAM="slc7_amd64_gcc700"
-  RECO_REL="CMSSW_10_2_18"
+  RECO_REL="CMSSW_10_2_20_UL"
   RECO_SCRAM="slc7_amd64_gcc700"
-  MINI_REL="CMSSW_10_2_18"
+  MINI_REL="CMSSW_10_2_20_UL"
   MINI_SCRAM="slc7_amd64_gcc700"
 fi
 

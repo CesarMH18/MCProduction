@@ -2,12 +2,12 @@
 
 export SCRAM_ARCH=slc7_amd64_gcc700
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-if [ -r CMSSW_10_2_18/src ] ; then
-  echo release CMSSW_10_2_18 already exists
+if [ -r CMSSW_10_2_20_UL/src ] ; then
+  echo release CMSSW_10_2_20_UL already exists
 else
-  scram p CMSSW_10_2_18
+  scram p CMSSW_10_2_20_UL
 fi
-cd CMSSW_10_2_18/src
+cd CMSSW_10_2_20_UL/src
 eval `scram runtime -sh`
 
 pyfile="py8_Ups(2S)2Ups(1S)pipi_EvtGen_TuneCP5_13TeV_cfi.py"
@@ -22,12 +22,12 @@ sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServi
 
 
 export SCRAM_ARCH=slc7_amd64_gcc700
-if [ -r CMSSW_10_2_18/src ] ; then
-  echo release CMSSW_10_2_18 already exists
+if [ -r CMSSW_10_2_20_UL/src ] ; then
+  echo release CMSSW_10_2_20_UL already exists
 else
-  scram p CMSSW CMSSW_10_2_18
+  scram p CMSSW CMSSW_10_2_20_UL
 fi
-cd CMSSW_10_2_18/src
+cd CMSSW_10_2_20_UL/src
 eval `scram runtime -sh`
 
 scram b
@@ -41,12 +41,12 @@ sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServi
 
 
 export SCRAM_ARCH=slc7_amd64_gcc700
-if [ -r CMSSW_10_2_18/src ] ; then
-  echo release CMSSW_10_2_18 already exists
+if [ -r CMSSW_10_2_20_UL/src ] ; then
+  echo release CMSSW_10_2_20_UL already exists
 else
-  scram p CMSSW_10_2_18
+  scram p CMSSW_10_2_20_UL
 fi
-cd CMSSW_10_2_18/src
+cd CMSSW_10_2_20_UL/src
 eval `scram runtime -sh`
 
 scram b
