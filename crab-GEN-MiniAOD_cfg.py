@@ -32,7 +32,7 @@ config.JobType.numCores = 1
 config.JobType.maxMemoryMB = 3300
 config.JobType.scriptExe = 'MCcrabJobScript.sh'
 config.JobType.scriptArgs = ['CHANNEL_DECAY='+channel,'YEAR='+year]
-config.JobType.outputFiles = ['MC-ups2s2ups1spipi.root']
+config.JobType.outputFiles = ['MC-'+year+'-'+channel+'.root']
 config.Data.outputPrimaryDataset = myname
 config.Data.splitting = 'EventBased'
 config.Data.unitsPerJob = nEvents
