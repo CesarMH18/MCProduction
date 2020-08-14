@@ -59,7 +59,7 @@ cd ../../
 
 echo "================= PB: CMSRUN starting Gen step ===================="
 # PSet is the name that crab assigns to the config file of the job
-cmsRun -j ${CHANNEL_DECAY}_step0.log  -p PSet.py
+cmsRun -j FrameworkJobReport.xml  -p PSet.py
 #cmsRun -j ${CHANNEL_DECAY}_step0.log -p step0-GS-${CHANNEL_DECAY}_cfg.py
 
 
@@ -106,6 +106,6 @@ cmsRun -e -j ${CHANNEL_DECAY}_step3.log  step3-MiniAOD-${CHANNEL_DECAY}_cfg.py
 #rm -rfv step2-DR-${CHANNEL_DECAY}.root
 
 echo "================= PB: CMSRUN starting Skimming ===================="
-cmsRun -e -j FrameworkJobReport.xml Skimming_MC_cfg.py inputFiles=file:step3-MiniAOD-${CHANNEL_DECAY}.root outputFile=MC-${YEAR}-${CHANNEL_DECAY}.root
+cmsRun -e -j ${CHANNEL_DECAY}_skimming.log Skimming_MC_cfg.py inputFiles=file:step3-MiniAOD-${CHANNEL_DECAY}.root outputFile=MC-${YEAR}-${CHANNEL_DECAY}.root
 #cleaning
 #rm -rfv step3-MiniAOD-${CHANNEL_DECAY}.root
