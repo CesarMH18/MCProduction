@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export SCRAM_ARCH=slc7_amd64_gcc820
+export SCRAM_ARCH=slc7_amd64_gcc700
 source /cvmfs/cms.cern.ch/cmsset_default.sh
 if [ -r CMSSW_10_2_20_UL/src ] ; then
   echo release CMSSW_10_2_20_UL already exists
