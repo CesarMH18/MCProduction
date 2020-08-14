@@ -1,13 +1,13 @@
 #!/bin/bash
 
-export SCRAM_ARCH=slc7_amd64_gcc700
+export SCRAM_ARCH=slc6_amd64_gcc700
 source /cvmfs/cms.cern.ch/cmsset_default.sh
-if [ -r CMSSW_10_2_20_UL/src ] ; then
-  echo release CMSSW_10_2_20_UL already exists
+if [ -r CMSSW_10_2_6/src ] ; then
+  echo release CMSSW_10_2_6 already exists
 else
-  scram p CMSSW_10_2_20_UL
+  scram p CMSSW_10_2_6
 fi
-cd CMSSW_10_2_20_UL/src
+cd CMSSW_10_2_6/src
 eval `scram runtime -sh`
 
 pyfile="py8_Ups(2S)2Ups(1S)pipi_EvtGen_TuneCP5_13TeV_cfi.py"
@@ -21,17 +21,18 @@ cmsDriver.py Configuration/GenProduction/python/$pyfile --fileout file:step0-GS-
 sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper \nrandSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)\nrandSvc.populate()" step0-GS-ups2s2ups1spipi_cfg.py
 
 
-export SCRAM_ARCH=slc7_amd64_gcc700
-if [ -r CMSSW_10_2_20_UL/src ] ; then
-  echo release CMSSW_10_2_20_UL already exists
+export SCRAM_ARCH=slc6_amd64_gcc700
+if [ -r CMSSW_10_2_6/src ] ; then
+  echo release CMSSW_10_2_6 already exists
 else
-  scram p CMSSW CMSSW_10_2_20_UL
+  scram p CMSSW CMSSW_10_2_6
 fi
-cd CMSSW_10_2_20_UL/src
+cd CMSSW_10_2_6/src
 eval `scram runtime -sh`
 
 scram b
 cd ../../
+
 
 cmsDriver.py step1 --filein file:step0-GS-ups2s2ups1spipi.root  --fileout file:step1-DR-ups2s2ups1spipi.root --pileup_input "dbs:/Neutrino_E-10_gun/RunIISummer17PrePremix-PUAutumn18_102X_upgrade2018_realistic_v15-v1/GEN-SIM-DIGI-RAW" --mc --eventcontent PREMIXRAW --datatier GEN-SIM-RAW --conditions 102X_upgrade2018_realistic_v15 --step DIGI,DATAMIX,L1,DIGI2RAW,HLT:@relval2018 --procModifiers premix_stage2 --nThreads 1 --geometry DB:Extended --datamix PreMix --era Run2_2018 --python_filename step1-DR-ups2s2ups1spipi_cfg.py --no_exec --customise Configuration/DataProcessing/Utils.addMonitoring -n -1;
 sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper\nrandSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)\nrandSvc.populate() " step1-DR-ups2s2ups1spipi_cfg.py
@@ -40,13 +41,13 @@ cmsDriver.py step2 --filein file:step1-DR-ups2s2ups1spipi.root --fileout file:st
 sed -i "20 a from IOMC.RandomEngine.RandomServiceHelper import RandomNumberServiceHelper\nrandSvc = RandomNumberServiceHelper(process.RandomNumberGeneratorService)\nrandSvc.populate()" step2-DR-ups2s2ups1spipi_cfg.py
 
 
-export SCRAM_ARCH=slc7_amd64_gcc700
-if [ -r CMSSW_10_2_20_UL/src ] ; then
-  echo release CMSSW_10_2_20_UL already exists
+export SCRAM_ARCH=slc6_amd64_gcc700
+if [ -r CMSSW_10_2_6/src ] ; then
+  echo release CMSSW_10_2_6 already exists
 else
-  scram p CMSSW_10_2_20_UL
+  scram p CMSSW_10_2_6
 fi
-cd CMSSW_10_2_20_UL/src
+cd CMSSW_10_2_6/src
 eval `scram runtime -sh`
 
 scram b
