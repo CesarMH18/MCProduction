@@ -15,3 +15,14 @@ In this tutorial we are using [ups2s2ups1spipi](py8_Ups\(2S\)2Ups\(1S\)pipi_EvtG
 * Test locally using [the script](MCcrabJobScript.sh)
 
 * Finally send the job using [crab config file](crab-GEN-MiniAOD_cfg.py)
+
+
+Usefull references
+
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGeneration
+
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookGenIntro
+
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3AdvancedTutorial
+
+https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile#CRAB_configuration_parameters
